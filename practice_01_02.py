@@ -94,9 +94,14 @@ elif 20<a<=40:
 elif 0<=a<=20:
     print("graid is E")
 
-# !! 123
+#%%
+# !!! 123 if를 쓰지말고 dictionaly를 가지고 만들어보자
+환율 = {'달러':1167, '엔':1.096, '유로':1268, '위안':171}
 
 
+
+
+#%%
 # ! 124
 a = int(input('input number1 : '))
 b = int(input('input number2 : '))
@@ -288,7 +293,8 @@ for a in range(1,31):
         print(a)
 
 # !! 164
-
+for i in range(100):
+    print(99-i)
 
 # 165
 for a in range(0,10):
@@ -328,8 +334,9 @@ for a in range(len(price_list)):
     print(price_list[a])
 
 # !! 172
-
-
+price_list = [32100, 32150, 32000, 32500]
+for i, price in enumerate(price_list):
+    print(i,price)
 
 # !173
 price_list = [32100, 32150, 32000, 32500]
@@ -392,11 +399,12 @@ stock = {'10/10':[80,110,70,90],'10/11':[210,230,190,200]}
 # !! 185
 # range랑 len 쓰지말고 구현해보기
 apart = [ [101, 102], [201, 202], [301, 302] ]
+for i in apart:
+    for k in i:
+        print(k)
 
 
-
-
-# ! 186
+# !!! 186
 # range랑 len 쓰지말고 구현해보기
 apart = [ [101, 102], [201, 202], [301, 302] ]
 

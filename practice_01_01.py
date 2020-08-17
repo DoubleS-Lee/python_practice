@@ -1,5 +1,4 @@
-# 초보자를 위한 파이썬 300제
-# https://wikidocs.net/7014
+
 
 # 1
 print('Hello World')
@@ -20,7 +19,7 @@ print("안녕하세요.\n만나서\t\t반갑습니다.")
 print("오늘은", "일요일")
 
 # ! 7
-
+print('naver','kakao','samsung',sep=';')
 
 # 8
 print('naver','kakao','sk','samsung',sep='/')
@@ -92,7 +91,7 @@ print(f'{string[::2]}')
 
 # !! 24
 string = "PYTHON"
-
+print(string[::-1])
 
 # ! 25
 phone_number = "010-1111-2222"
@@ -167,6 +166,8 @@ print(a)
 
 # ! 44, 45
 file_name = "보고서.xlsx"
+file_name.endswith('xlsx')
+file_name.endswith(('xlsx','xls'))
 
 # ! 46
 file_name = "2020_보고서.xlsx"
@@ -255,17 +256,17 @@ interest = ['삼성전자', 'LG전자', 'Naver']
 print(interest[::2])
 
 
-# !! 66
+# !!! 66
 interest = ['삼성전자', 'LG전자', 'Naver', 'SK하이닉스', '미래에셋대우']
 
 
-# !! 67
+
+# !!! 67
 interest = ['삼성전자', 'LG전자', 'Naver', 'SK하이닉스', '미래에셋대우']
 
 
-# !! 68
+# !!! 68
 interest = ['삼성전자', 'LG전자', 'Naver', 'SK하이닉스', '미래에셋대우']
-
 
 # 69
 string = "삼성전자/LG전자/Naver"
@@ -327,7 +328,8 @@ temp = {}
 a = {"메로나":1000, "폴라포":1200, "빵빠레":1800}
 
 # !! 86
-
+b = {'죠스바':1200, '월드콘':1500}
+a.update(b)
 
 # 87
 ice = {'메로나': 1000,
@@ -350,8 +352,12 @@ inventory = {'메로나':[300,20], '비비빅':[400,3], '죠스바':[250,100]}
 
 # !! 92
 inventory = {"메로나":[300,20], "비비빅":[400,3], "죠스바":[250,100]}
+print(f"{inventory['메로나'][0]} 원")
 
 # !! 93
+inventory = {"메로나":[300,20], "비비빅":[400,3], "죠스바":[250,100]}
+print(f"{inventory['메로나'][1]} 개")
+
 
 # 94
 inventory["월드콘"]=[500,7]
@@ -378,19 +384,14 @@ new_product = {'팥빙수':2700, '아맛나':1000}
 icecream.update(new_product)
 
 
-# !! 99
+# !!! 99
 keys = ("apple", "pear", "peach")
 vals = (300, 250, 400)
 
 
-# !! 100
+# !!! 100
 date = ['09/05', '09/06', '09/07', '09/08', '09/09']
 close_price = [10500, 10300, 10100, 10800, 11000]
-
-
-
-
-
 
 
 

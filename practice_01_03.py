@@ -6,6 +6,7 @@ def print_coin():
     print('비트코인')
 
 # !202
+print_coin()
 
 # 203
 for a in range(100):
@@ -51,22 +52,22 @@ def print_max(a,b,c):
         print(b)
     else:
         print(c)
-
+#%%
 # !221
 def print_reverse(a):
     for i in a[::-1]:
         print(i)
-print_reverse('python')
     
-# !222 
-def print_score(a):
-    sum = 0
-    for i in a:
-        sum += i
-    ave = sum/len(a)
-    print(ave)
-print_score([1, 2, 3])
+print_reverse('python')
 
+#%%
+# !222 
+def print_score(score):
+    return sum(score)/len(score)
+        
+print(print_score([1,2,3]))
+
+#%%
 # 223
 def print_even(a):
     for i in a:
@@ -90,18 +91,26 @@ my_dict = {"10/26" : [100, 130, 100, 100],
            "10/27" : [10, 12, 10, 11]}
 
 print_value_by_key(my_dict, "10/26")
-
-# !226
-
+#%%
+# !!226
+def print_5xn(a):
+    num = int(len(a)/5)
+    for i in range(num):
+        print(a[i*5:i*5+5])
+        
 print_5xn("아이엠어보이유알어걸")
 
-# 227
-def print_mxn(a,b):
-    c = int(len(a)/b)
-    for i in range(c+1):
-        print(a[i*b:i*b+b])
-    
+
+#%%
+# !!227
+def print_mxn(a,num):
+    string_num = int(len(a)/num) + 1
+    for i in range(string_num):
+        print(a[i*num:i*num+num])
+
 print_mxn("아이엠어보이유알어걸", 3)
+
+#%%
 
 # 228
 def calc_monthly_salary(annual_salary):
@@ -165,19 +174,84 @@ print(a)
 #객체
 #인스턴스
 
+#%%
 # !252~259
+class Human():
+    def __init__(self, name, age, sex):
+        self.name = name
+        self.age = age
+        self.sex = sex
+
+    def who(self):
+        print(f'이름 : {self.name}, 나이 : {self.age}, 성별 : {self.sex}')
+    
+    def setInfo(self, name, age, sex):
+        self.name = name
+        self.age = age
+        self.sex = sex
+    
+    def __del__(self):
+        print("나의 죽음을 알리지 말라")
+
+areum = Human('아름', 25, '여자')
+areum.who()
+del areum
 
 
+
+#%%
 # !261~270
+class Stock():
+    def __init__(self, name, code, per, pbr, profit):
+        self.name = name
+        self.code = code
+        self.per = per
+        self.pbr = pbr
+        self.profit = profit
+    
+    def set_name(self, name):
+        self.name = name
+    
+    def set_code(self, code):
+        self.code = code
+        
+    def get_name(self):
+        return self.name
+    
+    def get_code(self):
+        return self.code
+    
+    def set_per(self,per):
+        self.per = per
+    
+    def set_pbr(self,pbr):
+        self.pbr = pbr
+    
+    def set_dividend(self,profit):
+        self.profit = profit
 
 
-# !271~280
+a = Stock("삼성전자", "005930",15.79,1.33,2.83)
+b = Stock("현대차", "005380",8.70,0.35,4.27)
+c = Stock("LG전자", "066570",317.34,0.69,1.37)
 
-# !281~290
+s_list = [a,b,c]
+
+for i in s_list:
+    print(i.code, i.per)
+
+삼성.set_per(12.75)
+print(삼성.per)
 
 
 
+#%%
+# !! 271~280
 
+
+
+#%%
+# !! 281~290
 
 
 
